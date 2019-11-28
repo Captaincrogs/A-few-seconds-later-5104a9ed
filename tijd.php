@@ -1,10 +1,26 @@
 <?php
 
-if (strpos($argv[1], "s"))
+$character = 's';
+$numbersArray = array();
+foreach ($argv as $value)
+{
+  $pos = strpos($value, $character);
+  if ($pos)
+  {
+    $intVariable = '';
+    for ($i=0; $i < (strlen($value) - 1); $i++)
+    {
+      $intVariable = $intVariable . $value[$i];
+    }
+    if (!is_numeric($intVariable))
+    {
+      echo "$intVariable is geen tijd \n";
+    }
+    else
+    {
+      echo "$intVariable secondes \n";
+    }
+  }
+}
 
-
-    echo str_replace("s", " seconden", $argv[1]);
-
-else
-	echo "Geen tijd gevonden\n";
 ?>
