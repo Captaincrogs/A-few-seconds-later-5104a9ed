@@ -1,18 +1,10 @@
 <?php
 
+if (strpos($argv[1], "s"))
 
 
-readline ("wat is je tijd" );
-$seconds = "150";
-$minutes = floor($seconds/60);
-$secondsleft = $seconds%60;
-if($minutes<10)
-	$minutes = "0" . $minutes;
-if($secondsleft<10)
-	$secondsleft = "0" . $secondsleft;
+    echo str_replace("s", " seconden", $argv[1]);
 
-echo "$minutes:$secondsleft minutes";
-
-
-
+else
+	echo "Geen tijd gevonden\n";
 ?>
